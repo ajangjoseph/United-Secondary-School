@@ -1,0 +1,921 @@
+
+/* =========================================
+   UNITED SECONDARY SCHOOL
+   COMPLETE WEBSITE STYLESHEET
+========================================= */
+
+/* COLOUR SETTINGS */
+
+:root {
+    --primary: #123d70;
+    --secondary: #0b2850;
+    --accent: #e5a72e;
+    --light: #f5f8fc;
+    --white: #ffffff;
+    --dark: #17263c;
+    --gray: #687587;
+    --border: #e5eaf1;
+}
+
+/* GENERAL SETTINGS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--dark);
+    line-height: 1.7;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section-padding {
+    padding: 90px 0;
+}
+
+/* TOP BAR */
+
+.top-bar {
+    background: var(--secondary);
+    color: white;
+    font-size: 12px;
+    padding: 9px 0;
+}
+
+.top-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.top-content i {
+    color: var(--accent);
+    margin-right: 5px;
+}
+
+/* NAVIGATION */
+
+.header {
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.06);
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 85px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-icon {
+    background: var(--primary);
+    color: white;
+    font-size: 27px;
+    width: 52px;
+    height: 52px;
+    display: grid;
+    place-items: center;
+    border-radius: 10px;
+}
+
+.logo-text strong {
+    display: block;
+    font-size: 30px;
+    color: var(--primary);
+    line-height: 1.2;
+}
+
+.logo-text small {
+    font-size: 20px;
+    letter-spacing: 2px;
+    color: var(--gray);
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.navigation a {
+    font-size: 12px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.navigation a:hover,
+.navigation a.active {
+    color: var(--accent);
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: var(--primary);
+    cursor: pointer;
+}
+
+/* HERO SECTION
+   Uses your actual school group photograph.
+*/
+
+.hero {
+    min-height: 650px;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    background:
+        url("WhatsApp Image 2026-10-30 at 6.42.11 PM.jpeg")
+        center 40% / cover no-repeat;
+
+    color: white;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        90deg,
+        rgba(5, 25, 55, 0.82),
+        rgba(5, 25, 55, 0.45),
+        rgba(5, 25, 55, 0.15)
+    );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+
+.hero-label {
+    color: var(--accent);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 6vw, 65px);
+    line-height: 1.2;
+    margin: 22px 0;
+    font-weight: 800;
+}
+
+.hero h1 span {
+    color: var(--accent);
+}
+
+.hero-content p {
+    max-width: 620px;
+    font-size: 15px;
+    color: #e2e9f3;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* BUTTONS */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 13px 24px;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background: var(--accent);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #c88a16;
+    transform: translateY(-3px);
+}
+
+.btn-outline {
+    border: 1px solid white;
+    color: white;
+}
+
+.btn-outline:hover {
+    background: white;
+    color: var(--primary);
+}
+
+.btn-light {
+    background: white;
+    color: var(--primary);
+}
+
+.btn-light:hover {
+    background: var(--accent);
+    color: white;
+}
+
+/* HERO BOTTOM BAR */
+
+.hero-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    background: rgba(5,25,55,0.8);
+    padding: 18px;
+    font-size: 13px;
+}
+
+.hero-bottom i {
+    color: var(--accent);
+    margin-right: 7px;
+}
+
+/* SECTION HEADINGS */
+
+.section-label {
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+
+.section-heading {
+    text-align: left;
+    max-width: 700px;
+    text-align: justify;
+
+   
+}
+
+.section-heading h2 {
+    font-size: 32px;
+    color: var(--primary);
+    margin: 10px 0;
+}
+
+.section-heading p {
+    font-size: 14px;
+    color: var(--gray);
+}
+
+/* WELCOME SECTION
+   Uses your second actual photograph.
+*/
+
+.welcome-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 60px;
+}
+
+.welcome-image {
+    position: relative;
+}
+
+.welcome-image img {
+    width: 100%;
+    height: 430px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px;
+}
+
+.image-caption {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: white;
+    padding: 15px 22px;
+    border-left: 4px solid var(--accent);
+}
+
+.image-caption strong,
+.image-caption small {
+    display: block;
+}
+
+.image-caption strong {
+    color: var(--primary);
+}
+
+.image-caption small {
+    color: var(--gray);
+}
+
+.welcome-text h2 {
+    font-size: 34px;
+    color: var(--primary);
+    line-height: 1.3;
+    margin: 15px 0;
+}
+
+.welcome-text h2 span {
+    color: var(--accent);
+}
+
+.welcome-text p {
+    color: var(--gray);
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
+.text-link {
+    display: inline-block;
+    margin-top: 12px;
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.text-link i {
+    color: var(--accent);
+}
+
+/* STATISTICS */
+
+.statistics {
+    background: var(--primary);
+    padding: 45px 0;
+    color: white;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    text-align: center;
+}
+
+.stat-item i {
+    font-size: 30px;
+    color: var(--accent);
+}
+
+.stat-item h3 {
+    margin-top: 8px;
+    font-size: 19px;
+}
+
+.stat-item p {
+    color: #d0dcec;
+    font-size: 13px;
+}
+
+/* ABOUT SECTION */
+
+.about {
+    background: var(--light);
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.about-card {
+    background: white;
+    padding: 30px 23px;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.04);
+    transition: 0.3s;
+    border-bottom: 3px solid transparent;
+}
+
+.about-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--accent);
+}
+
+.about-icon {
+    width: 55px;
+    height: 55px;
+    display: grid;
+    place-items: center;
+    background: #edf3fa;
+    color: var(--primary);
+    border-radius: 8px;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.about-card h3 {
+    font-size: 17px;
+    color: var(--primary);
+    margin-bottom: 12px;
+}
+
+.about-card p {
+    font-size: 12px;
+    color: var(--gray);
+}
+
+/* LEADERSHIP */
+
+.leadership-grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: center;
+    gap: 60px;
+}
+
+.leadership-image img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px;
+}
+
+.leadership-content h2 {
+    font-size: 32px;
+    color: var(--primary);
+    margin: 12px 0;
+}
+
+.leadership-content p {
+    font-size: 14px;
+    color: var(--gray);
+    margin-bottom: 20px;
+}
+
+.placeholder-note {
+    background: #fff8e8;
+    border-left: 3px solid var(--accent);
+    padding: 12px;
+}
+
+/* ACADEMICS */
+
+.academics {
+    background: var(--light);
+}
+
+.academic-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.academic-card {
+    background: white;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.academic-card:hover {
+    transform: translateY(-7px);
+}
+
+.academic-card img {
+    height: 230px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.academic-info {
+    padding: 25px;
+}
+
+.academic-info span {
+    color: var(--accent);
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.academic-info h3 {
+    color: var(--primary);
+    margin: 8px 0;
+}
+
+.academic-info p {
+    color: var(--gray);
+    font-size: 13px;
+}
+
+/* ADMISSIONS */
+
+.admissions {
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(12,48,91,0.92),
+            rgba(12,48,91,0.92)
+        ),
+        url("images/school-group.jpg")
+        center / cover no-repeat;
+
+    color: white;
+}
+
+.admissions-content h2 {
+    font-size: 35px;
+    margin: 15px 0;
+}
+
+.admissions-content p {
+    max-width: 650px;
+    margin: 0 auto 30px;
+    font-size: 14px;
+    color: #d9e3ef;
+}
+
+/* GALLERY */
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 7px;
+    height: 250px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.4s;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.08);
+}
+
+/* CONTACT */
+
+.contact {
+    background: var(--light);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 50px;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.contact-item {
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+}
+
+.contact-item > i {
+    background: var(--primary);
+    color: white;
+    min-width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    border-radius: 7px;
+    font-size: 20px;
+}
+
+.contact-item h3 {
+    color: var(--primary);
+    font-size: 16px;
+}
+
+.contact-item p {
+    font-size: 13px;
+    color: var(--gray);
+}
+
+.contact-form {
+    background: white;
+    padding: 35px;
+    border-radius: 8px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+}
+
+.contact-form h3 {
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 15px;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 13px;
+    outline: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--primary);
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+/* FOOTER */
+
+.footer {
+    background: var(--secondary);
+    color: white;
+    padding-top: 60px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 0.8fr 1fr;
+    gap: 50px;
+    padding-bottom: 45px;
+}
+
+.footer h2 {
+    font-size: 22px;
+}
+
+.footer-about span {
+    color: var(--accent);
+    font-size: 12px;
+}
+
+.footer p {
+    color: #c5d0df;
+    font-size: 13px;
+    margin-top: 15px;
+}
+
+.footer h3 {
+    font-size: 16px;
+    margin-bottom: 18px;
+}
+
+.footer-links a {
+    display: block;
+    color: #c5d0df;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.footer-links a:hover {
+    color: var(--accent);
+}
+
+.footer-contact p i {
+    color: var(--accent);
+    margin-right: 8px;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.15);
+    padding: 20px 5%;
+    text-align: center;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+.footer-bottom small {
+    color: #9cabc0;
+}
+
+/* BACK TO TOP */
+
+.back-to-top {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    width: 45px;
+    height: 45px;
+    background: var(--accent);
+    color: white;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    font-size: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+    z-index: 900;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* TABLET RESPONSIVENESS */
+
+@media (max-width: 1000px) {
+
+    .navigation {
+        gap: 13px;
+    }
+
+    .navigation a {
+        font-size: 11px;
+    }
+
+    .about-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 768px) {
+
+    .top-content {
+        justify-content: center;
+        font-size: 10px;
+    }
+
+    .nav-container {
+        min-height: 75px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .navigation {
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        background: white;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 20px 5%;
+        box-shadow: 0 10px 15px rgba(0,0,0,0.08);
+        gap: 18px;
+    }
+
+    .navigation.open {
+        display: flex;
+    }
+
+    .navigation a {
+        font-size: 14px;
+    }
+
+    .hero {
+        min-height: 600px;
+        background-position: center;
+    }
+
+    .hero-bottom {
+        gap: 15px;
+        font-size: 10px;
+        flex-wrap: wrap;
+    }
+
+    .welcome-grid,
+    .leadership-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .welcome-text h2,
+    .leadership-content h2 {
+        font-size: 28px;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 35px;
+    }
+
+    .academic-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+/* SMALL PHONES */
+
+@media (max-width: 480px) {
+
+    .section-padding {
+        padding: 65px 0;
+    }
+
+    .logo-text strong {
+        font-size: 18px;
+    }
+
+    .logo-text small {
+        font-size: 8px;
+    }
+
+    .logo-icon {
+        width: 43px;
+        height: 43px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero-content p {
+        font-size: 13px;
+    }
+
+    .hero-bottom {
+        justify-content: space-around;
+    }
+
+    .about-grid,
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-item {
+        height: 230px;
+    }
+
+    .section-heading h2 {
+        font-size: 26px;
+    }
+
+    .admissions-content h2 {
+        font-size: 27px;
+    }
+
+    .contact-form {
+        padding: 22px;
+    }
+}
